@@ -47,7 +47,8 @@
     ]
   },
   "dependencies": {
-    "acordia": "^2.0.1"
+    "acordia": "^2.0.1",
+    "discord.js": "^14.25.1"
   },
   "exports": {
     ".": {

@@ -1,11 +1,11 @@
 import {
   SlashCommandBuilder,
-  CommandInteraction,
   AutocompleteInteraction,
   ActionRowBuilder,
   ButtonBuilder,
   ButtonStyle,
   ButtonInteraction,
+  ChatInputCommandInteraction,
 } from 'discord.js';
 import { BaseCommand } from '../../dist/baseCommand.js';
 import type { Bot } from '../index.js';
@@ -20,7 +20,7 @@ export default class TestCommand extends BaseCommand<Bot> {
     .toJSON();
   commandPermissions = [];
   ownerOnly = false;
-  executeCommand(_: Bot, interaction: CommandInteraction) {
+  executeCommand(_: Bot, interaction: ChatInputCommandInteraction) {
     interaction.reply({
       content: `(●'◡'●)\nYou entered: ${interaction.options.get('auto')?.value}`,
       components: [
